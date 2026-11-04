@@ -228,97 +228,97 @@ int main() {
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 
 		//Mano 
-		//model = glm::translate(modelTemp, glm::vec3(1.0f, 0.0f, 0.0f));
-		//model = glm::rotate(model, glm::radians(muneca), glm::vec3(1.0f, 0.0, 0.0f)); //muñeca
-		//modelTemp = model = glm::translate(model, glm::vec3(0.25f, 0.0f, 0.0f));
-		//model = glm::scale(model, glm::vec3(0.5f, 1.0f, 1.0f));
-		//color = glm::vec3(0.0f, 0.0f, 1.0f);
-		//glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glDrawArrays(GL_TRIANGLES, 0, 36);
+		model = glm::translate(modelTemp, glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(muneca), glm::vec3(1.0f, 0.0, 0.0f)); //muñeca
+		modelTemp = model = glm::translate(model, glm::vec3(0.25f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.5f, 1.0f, 1.0f));
+		color = glm::vec3(0.0f, 0.0f, 1.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		//// Pivote base de los dedos: solo X 
-		//modelTemp = glm::translate(modelTemp, glm::vec3(0.25f, 0.0f, 0.0f));
+		// Pivote base de los dedos: solo X 
+		modelTemp = glm::translate(modelTemp, glm::vec3(0.25f, 0.0f, 0.0f));
 
-		//// Dedo 1 
-		//modelTemp2 = glm::translate(modelTemp, glm::vec3(0.0f, 0.375f, 0.375f));   // Y, Z
-		//modelTemp2 = glm::rotate(modelTemp2, glm::radians(dedo), glm::vec3(0, 0, 1)); //Pivote del Dedo 1
-		//model = glm::translate(modelTemp2, glm::vec3(0.4f, 0.0f, 0.0f)); // Centro del Dedo 1
-		//model = glm::scale(model, glm::vec3(0.8f, 0.2f, 0.2f));
-		//color = glm::vec3(1.0f, 1.0f, 0.0f);
-		//glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glDrawArrays(GL_TRIANGLES, 0, 36);
+		// Dedo 1 
+		modelTemp2 = glm::translate(modelTemp, glm::vec3(0.0f, 0.375f, 0.375f));   // Y, Z
+		modelTemp2 = glm::rotate(modelTemp2, glm::radians(dedo), glm::vec3(0, 0, 1)); //Pivote del Dedo 1
+		model = glm::translate(modelTemp2, glm::vec3(0.4f, 0.0f, 0.0f)); // Centro del Dedo 1
+		model = glm::scale(model, glm::vec3(0.8f, 0.2f, 0.2f));
+		color = glm::vec3(1.0f, 1.0f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		//// Falange 1
-		//model = glm::translate(modelTemp2, glm::vec3(0.8f, 0.0f, 0.0f));
-		//model = glm::rotate(model, glm::radians(falange), glm::vec3(0, 0, 1)); //Pivote  de Falange 1
-		//model = glm::translate(model, glm::vec3(0.3f, 0.0f, 0.0f));
-		//model = glm::scale(model, glm::vec3(0.6f, 0.18f, 0.18f));
-		//color = glm::vec3(1.0f, 0.6f, 0.0f);
-		//glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glDrawArrays(GL_TRIANGLES, 0, 36);
+		// Falange 1
+		model = glm::translate(modelTemp2, glm::vec3(0.8f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(falange), glm::vec3(0, 0, 1)); //Pivote  de Falange 1
+		model = glm::translate(model, glm::vec3(0.3f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(0.6f, 0.18f, 0.18f));
+		color = glm::vec3(1.0f, 0.6f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		//// Dedo 2 
-		//modelTemp2 = glm::translate(modelTemp, glm::vec3(0.0f, -0.375f, -0.375f));
-		//modelTemp2 = glm::rotate(modelTemp2, glm::radians(dedo2), glm::vec3(0, 0, 1)); //Pivote del Dedo 2
-		//model = glm::translate(modelTemp2, glm::vec3(0.4f, 0.0f, 0.0f));//Centro del Dedo 2
-		//model = glm::scale(model, glm::vec3(0.8f, 0.2f, 0.2f));
-		//color = glm::vec3(1.0f, 1.0f, 0.0f);
-		//glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glDrawArrays(GL_TRIANGLES, 0, 36);
+		// Dedo 2 
+		modelTemp2 = glm::translate(modelTemp, glm::vec3(0.0f, -0.375f, -0.375f));
+		modelTemp2 = glm::rotate(modelTemp2, glm::radians(dedo2), glm::vec3(0, 0, 1)); //Pivote del Dedo 2
+		model = glm::translate(modelTemp2, glm::vec3(0.4f, 0.0f, 0.0f));//Centro del Dedo 2
+		model = glm::scale(model, glm::vec3(0.8f, 0.2f, 0.2f));
+		color = glm::vec3(1.0f, 1.0f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		//// Falange 2
-		//model = glm::translate(modelTemp2, glm::vec3(0.8f, 0.0f, 0.0f));
-		//model = glm::rotate(model, glm::radians(falange2), glm::vec3(0, 0, 1)); //Pivote  de Falange 2
-		//model = glm::translate(model, glm::vec3(0.3f, 0.0f, 0.0f)); //Centro de Falange 2
-		//model = glm::scale(model, glm::vec3(0.6f, 0.18f, 0.18f));
-		//color = glm::vec3(1.0f, 0.6f, 0.0f);
-		//glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glDrawArrays(GL_TRIANGLES, 0, 36);
+		// Falange 2
+		model = glm::translate(modelTemp2, glm::vec3(0.8f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(falange2), glm::vec3(0, 0, 1)); //Pivote  de Falange 2
+		model = glm::translate(model, glm::vec3(0.3f, 0.0f, 0.0f)); //Centro de Falange 2
+		model = glm::scale(model, glm::vec3(0.6f, 0.18f, 0.18f));
+		color = glm::vec3(1.0f, 0.6f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		//// Dedo 3 
-		//modelTemp2 = glm::translate(modelTemp, glm::vec3(0.0f, 0.375f, -0.375f));
-		//modelTemp2 = glm::rotate(modelTemp2, glm::radians(dedo3), glm::vec3(0, 0, 1));//Pivote del Dedo 3
-		//model = glm::translate(modelTemp2, glm::vec3(0.4f, 0.0f, 0.0f)); //Centro del Dedo 3
-		//model = glm::scale(model, glm::vec3(0.8f, 0.2f, 0.2f));
-		//color = glm::vec3(1.0f, 1.0f, 0.0f);
-		//glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glDrawArrays(GL_TRIANGLES, 0, 36);
+		// Dedo 3 
+		modelTemp2 = glm::translate(modelTemp, glm::vec3(0.0f, 0.375f, -0.375f));
+		modelTemp2 = glm::rotate(modelTemp2, glm::radians(dedo3), glm::vec3(0, 0, 1));//Pivote del Dedo 3
+		model = glm::translate(modelTemp2, glm::vec3(0.4f, 0.0f, 0.0f)); //Centro del Dedo 3
+		model = glm::scale(model, glm::vec3(0.8f, 0.2f, 0.2f));
+		color = glm::vec3(1.0f, 1.0f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		//// Falange 3
-		//model = glm::translate(modelTemp2, glm::vec3(0.8f, 0.0f, 0.0f));
-		//model = glm::rotate(model, glm::radians(falange3), glm::vec3(0, 0, 1));//Pivote  de Falange 3
-		//model = glm::translate(model, glm::vec3(0.3f, 0.0f, 0.0f));//Centro de Falange 3-
-		//model = glm::scale(model, glm::vec3(0.6f, 0.18f, 0.18f));
-		//color = glm::vec3(1.0f, 0.6f, 0.0f);
-		//glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glDrawArrays(GL_TRIANGLES, 0, 36);
+		// Falange 3
+		model = glm::translate(modelTemp2, glm::vec3(0.8f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(falange3), glm::vec3(0, 0, 1));//Pivote  de Falange 3
+		model = glm::translate(model, glm::vec3(0.3f, 0.0f, 0.0f));//Centro de Falange 3-
+		model = glm::scale(model, glm::vec3(0.6f, 0.18f, 0.18f));
+		color = glm::vec3(1.0f, 0.6f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		//// Dedo 4 
-		//modelTemp2 = glm::translate(modelTemp, glm::vec3(0.0f, -0.375f, 0.375f));
-		//modelTemp2 = glm::rotate(modelTemp2, glm::radians(dedo4), glm::vec3(0, 0, 1)); //Pivote del Dedo 4
-		//model = glm::translate(modelTemp2, glm::vec3(0.4f, 0.0f, 0.0f)); //Centro del Dedo 4
-		//model = glm::scale(model, glm::vec3(0.8f, 0.2f, 0.2f));
-		//color = glm::vec3(1.0f, 1.0f, 0.0f);
-		//glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glDrawArrays(GL_TRIANGLES, 0, 36);
+		// Dedo 4 
+		modelTemp2 = glm::translate(modelTemp, glm::vec3(0.0f, -0.375f, 0.375f));
+		modelTemp2 = glm::rotate(modelTemp2, glm::radians(dedo4), glm::vec3(0, 0, 1)); //Pivote del Dedo 4
+		model = glm::translate(modelTemp2, glm::vec3(0.4f, 0.0f, 0.0f)); //Centro del Dedo 4
+		model = glm::scale(model, glm::vec3(0.8f, 0.2f, 0.2f));
+		color = glm::vec3(1.0f, 1.0f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 
-		//// Falange 4
-		//model = glm::translate(modelTemp2, glm::vec3(0.8f, 0.0f, 0.0f));
-		//model = glm::rotate(model, glm::radians(falange4), glm::vec3(0, 0, 1));//Pivote  de Falange 4
-		//model = glm::translate(model, glm::vec3(0.3f, 0.0f, 0.0f));//Centro de Falange 4
-		//model = glm::scale(model, glm::vec3(0.6f, 0.18f, 0.18f));
-		//color = glm::vec3(1.0f, 0.6f, 0.0f);
-		//glUniform3fv(uniformColor, 1, glm::value_ptr(color));
-		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		//glDrawArrays(GL_TRIANGLES, 0, 36);
+		// Falange 4
+		model = glm::translate(modelTemp2, glm::vec3(0.8f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(falange4), glm::vec3(0, 0, 1));//Pivote  de Falange 4
+		model = glm::translate(model, glm::vec3(0.3f, 0.0f, 0.0f));//Centro de Falange 4
+		model = glm::scale(model, glm::vec3(0.6f, 0.18f, 0.18f));
+		color = glm::vec3(1.0f, 0.6f, 0.0f);
+		glUniform3fv(uniformColor, 1, glm::value_ptr(color));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
 		
 		// Swap the screen buffers
 		glfwSwapBuffers(window);
